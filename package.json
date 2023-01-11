@@ -20,5 +20,8 @@
     "url": "git+https://github.com/DmytroKravchuk/react-localization-dk.git"
   },
   "author": "Dmytro Kravchuk <dimakravchuck93@gmail.com>",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "swipe-dk": "^1.0.3"
+  }
 }
