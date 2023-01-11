@@ -4,12 +4,14 @@ const LocalizationContext = React.createContext({
     currentLocalization: null,
     setCurrentAbbreviation: () => {},
     currentAbbreviation: null,
+    abbreviations: [],
 });
 
 export const LocalizationProvider = ({
     localization,
     children,
     defaultValue,
+    abbreviations
 }) => {
     const [currentAbbreviation, setCurrentAbbreviation] = useState(defaultValue);
 
@@ -18,6 +20,7 @@ export const LocalizationProvider = ({
             currentLocalization: localization[currentAbbreviation],
             setCurrentAbbreviation,
             currentAbbreviation,
+            abbreviations
         }),
         [currentAbbreviation]
     );
