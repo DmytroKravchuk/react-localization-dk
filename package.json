@@ -1,0 +1,23 @@
+{
+  "name": "react-localization-dk",
+  "version": "0.1.0",
+  "description": "Module for localize React app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react-localization",
+    "react localization",
+    "react localization hook",
+    "custom react localization",
+    "localization",
+    "how to localize react"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DmytroKravchuk/react-localization-dk.git"
+  },
+  "author": "Dmytro Kravchuk <dimakravchuck93@gmail.com>",
+  "license": "ISC"
+}
