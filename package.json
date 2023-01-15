@@ -1,11 +1,21 @@
 {
   "name": "react-localization-dk",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Module for localize React app",
-  "main": "index.js",
-  "private": true,
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/esm/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npm run build:esm && npm run build:cjs",
+    "build:esm": "tsc",
+    "build:cjs": "tsc --module commonjs --outDir dist/cjs",
+    "lint": "eslint \"{**/*,*}.{js,ts,jsx,tsx}\"",
+    "prettier": "prettier --write \"{src,}/**/*.{js,ts,jsx,tsx}\""
+  },
+  "prepare": "npm run build",
+  "prepublishOnly": "npm run prettier && npm run lint",
+  "peerDependencies": {
+    "react": ">=16"
   },
   "keywords": [
     "react-localization",
@@ -20,8 +30,24 @@
     "url": "git+https://github.com/DmytroKravchuk/react-localization-dk.git"
   },
   "author": "Dmytro Kravchuk <dimakravchuck93@gmail.com>",
-  "license": "ISC",
-  "dependencies": {
-    "swipe-dk": "^1.0.3"
-  }
+  "license": "MIT",
+  "devDependencies": {
+    "@types/react": "^18.0.26",
+    "@typescript-eslint/eslint-plugin": "^5.48.1",
+    "@typescript-eslint/parser": "^5.48.1",
+    "eslint": "^8.32.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.32.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "prettier": "^2.8.3",
+    "react": ">=16",
+    "react-dom": "^18.2.0",
+    "swipe-dk": "^1.0.3",
+    "typescript": "^4.9.4"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ]
 }
