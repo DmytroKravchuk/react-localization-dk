@@ -8,9 +8,8 @@ type Props = {
 }
 
 const LocalizationContext = React.createContext({
-  currentLocalization: null,
   locale: null,
-  setCurrentAbbreviation: () => {},
+  setCurrentAbbreviation: null,
   currentAbbreviation: null,
   abbreviations: [],
 })
@@ -20,7 +19,6 @@ export const LocalizationProvider = ({ localization, children, defaultValue, abb
 
   const valueObj = useMemo(
     () => ({
-      currentLocalization: localization[currentAbbreviation],
       locale: localization[currentAbbreviation],
       setCurrentAbbreviation,
       currentAbbreviation,

@@ -1,6 +1,6 @@
 {
   "name": "react-localization-dk",
-  "version": "0.1.7",
+  "version": "1.0.0",
   "description": "Module for localize React app",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",

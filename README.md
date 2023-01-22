@@ -1,4 +1,4 @@
-Version of React should be >= 16.8.0 (support hooks)
+Version of React should be >= 16.8.0 (supports hooks)
 
 How to use:
 
@@ -51,11 +51,13 @@ const {
 
 `<h2>{ locale.title }</h2>`
 
-4. That's all you have full access to all localizations, where:
+4. If you want to change localization just run `setCurrentAbbreviation(abbr of country in your obj)` Ex: `setCurrentAbbreviation(pl)`
+
+
+5. That's all you have full access to all localizations, where:
 ```
-    locale - current localization object { propName: text, propName2: text, ... }
-    setCurrentAbbreviation - function to change localization object, 
-    Example: setCurrentAbbreviation('ua')
-    currentAbbreviation - current abbrreviation, Example: 'en',
-    abbreviations - array of your abbrivations, Example: ['en', 'ua', 'pl']
+    locale - current localization object Ex: { propName: text, propName2: text, ... }
+    setCurrentAbbreviation - function to change localization object, Ex: setCurrentAbbreviation('ua')
+    currentAbbreviation - current abbrreviation, Ex: 'en',
+    abbreviations - array of your abbrivations, Ex: ['en', 'ua', 'pl']
 ```
