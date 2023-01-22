@@ -37,7 +37,7 @@ const localization = {
 
 Example:
 
-`import { useLocalization } from from 'LocalizationProvider'`
+`import { useLocalization } from 'LocalizationProvider'`
 
 ```
 const { 
