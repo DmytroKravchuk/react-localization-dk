@@ -41,7 +41,7 @@ Example:
 
 ```
 const { 
-    currentLocalization,
+    locale,
     setCurrentAbbreviation,
     currentAbbreviation,
     abbreviations
@@ -49,11 +49,11 @@ const {
 ```
 `then you can use it like this:`
 
-`<h2>{ currentLocalization.title }</h2>`
+`<h2>{ locale.title }</h2>`
 
 4. That's all you have full access to all localizations, where:
 ```
-    currentLocalization - current localization object { propName: text, propName2: text, ... }
+    locale - current localization object { propName: text, propName2: text, ... }
     setCurrentAbbreviation - function to change localization object, 
     Example: setCurrentAbbreviation('ua')
     currentAbbreviation - current abbrreviation, Example: 'en',
